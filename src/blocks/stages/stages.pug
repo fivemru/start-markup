@@ -1,0 +1,15 @@
+mixin stages(title, items)
+
+    section.stages.section&attributes(attributes)
+        .section__wrapper
+            h2.section__title!= title
+            .stages__list
+                each item in items
+                    +stage(item).stages__item
+
+mixin stage(data)
+    .stage&attributes(attributes)
+        .stage__image
+            .stage__num= data.num
+            .stage__icon(class=`stage__icon--${data.icon}`)
+        .stage__title.section__text!= data.title

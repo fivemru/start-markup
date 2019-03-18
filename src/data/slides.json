@@ -1,0 +1,23 @@
+[
+  {
+    "num": 1,
+    "title": "Gradients",
+    "text": "Start, end, angle",
+    "icon": "contrast",
+    "themeClass": "slide--blue"
+  },
+  {
+    "num": 2,
+    "title": "Presents",
+    "text": "Manage presents",
+    "icon": "paints",
+    "themeClass": "slide--green"
+  },
+  {
+    "num": 3,
+    "title": "Colors",
+    "text": "Pick any color",
+    "icon": "picker",
+    "themeClass": "slide--orange"
+  }
+]

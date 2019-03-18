@@ -1,0 +1,151 @@
+@import 'helpers';
+
+$font-size--section__title: 3.2rem;
+$font-size--section__title--xs: 2.6rem;
+$font-size--section__text: 2.4rem;
+$font-size--section__text--lg-md: 2.2rem;
+$font-size--section__text--sm: 2rem;
+$font-size--section__text--xs: 2rem;
+$font-size--section__card-title: 1.5rem;
+$line-height--section__title: 1.19;
+$line-height--section__text: 1.2;
+$line-height--section__card-title: 1.2;
+$font-weight--section__title: 500;
+$font-weight--section__text: 300;
+$font-weight--section__card-title: 400;
+$text-transform--section__card-title: uppercase;
+
+/* page */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & > * {
+    flex: 1 0 auto;
+  }
+
+  & > header {
+    flex: 0 0 auto;
+  }
+
+  & > footer {
+    flex: 0 0 auto;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: $screen-size--lg;
+    width: 100%;
+  }
+
+  /* Remove initial transition */
+  &--not-loaded * {
+    transition: none !important;
+  }
+}
+
+/* section */
+.section {
+  margin: 0 auto;
+  background-color: $color--section-bg;
+
+  &__wrapper {
+    padding: 0 8.1rem 6.8rem;
+
+    @include mq-max($screen-size--lg) {
+      padding: 0 5rem 6.5rem;
+    }
+
+    @include mq-max($screen-size--lg-md) {
+      padding: 0 4.5rem 6rem;
+    }
+
+    @include mq-max($screen-size--md) {
+      padding: 0 4rem 5rem;
+    }
+
+    @include mq-max($screen-size--sm-md) {
+      padding: 0 4rem 4rem;
+    }
+
+    @include mq-max($screen-size--sm) {
+      padding: 0 2rem 4rem;
+    }
+
+    @include mq-max($screen-size--xs) {
+      padding: 0 3rem 3.6rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding: 5rem;
+    text-align: center;
+    font-size: $font-size--section__title;
+    line-height: $line-height--section__title;
+    font-weight: $font-weight--section__title;
+
+    @include mq-max($screen-size--md) {
+      padding: 3rem 0;
+    }
+
+    @include mq-max($screen-size--xs) {
+      font-size: $font-size--section__title--xs;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 2.3rem;
+      height: 0.3rem;
+      vertical-align: middle;
+      transform: translateY(-50%);
+      background: $color--main-pink;
+      border-radius: 0.4rem;
+
+      @include mq-max($screen-size--md) {
+        content: none;
+      }
+    }
+
+    &::before {
+      left: -2.4rem;
+    }
+
+    &::after {
+      right: -2.4rem;
+    }
+  }
+
+  &__card-title {
+    font-size: $font-size--section__card-title;
+    line-height: $line-height--section__card-title;
+    font-weight: $font-weight--section__card-title;
+    text-transform: $text-transform--section__card-title;
+  }
+
+  &__text {
+    font-size: $font-size--section__text;
+    line-height: $line-height--section__text;
+    font-weight: $font-weight--section__text;
+
+    @include mq-max($screen-size--lg-md) {
+      font-size: $font-size--section__text--lg-md;
+    }
+
+    @include mq-max($screen-size--sm) {
+      font-size: $font-size--section__text--sm;
+    }
+
+    @include mq-max($screen-size--xs) {
+      font-size: $font-size--section__text--xs;
+    }
+  }
+}
+
+.break-line {
+  display: inline-block;
+}

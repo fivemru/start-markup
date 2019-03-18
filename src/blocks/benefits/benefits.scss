@@ -1,0 +1,91 @@
+@import 'helpers';
+
+.benefits {
+  $margin: 2.5rem;
+  $margin-top-mobile: 2.5rem;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -$margin;
+
+    @include mq-max($screen-size--md) {
+      margin-top: -$margin-top-mobile;
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: $margin;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @include mq-max($screen-size--md) {
+      margin-top: $margin-top-mobile;
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.benefit {
+  min-width: 20rem;
+  max-width: 25rem;
+
+  @include mq-max($screen-size--lg-md) {
+    max-width: 23rem;
+    flex: 1 1 0;
+  }
+
+  $width: 100px;
+  $height: 100px;
+
+  &__icon--fixed-price {
+    background-image: url(./sprite/fixed-price.png);
+    width: $width;
+    height: $height;
+  }
+  &__icon--warranty {
+    background-image: url(./sprite/warranty.png);
+    width: $width;
+    height: $height;
+  }
+  &__icon--budget {
+    background-image: url(./sprite/budget.png);
+    width: $width;
+    height: $height;
+  }
+
+  &__icon {
+    margin: auto;
+    transform: scale(0.8);
+
+    @include mq-max($screen-size--lg-md) {
+      margin-top: -1.5rem;
+      transform: scale(0.64);
+    }
+  }
+
+  &__text {
+    margin-top: 1.5rem;
+    text-align: center;
+
+    @include mq-max($screen-size--md) {
+      margin-top: -1rem;
+    }
+
+    @include mq-max($screen-size--lg-md) {
+      margin-top: -1rem;
+    }
+  }
+}

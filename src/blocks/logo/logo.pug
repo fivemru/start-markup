@@ -1,0 +1,9 @@
+mixin logo(href="/", alt="logo", width=249, height=159)
+    a.logo(href=href)&attributes(attributes)
+        img.logo__image(
+            src=require('blocks/logo/logo.png'),
+            srcset=require('blocks/logo/logo@2x.png') + ' 2x',
+            alt=alt,
+            width=width,
+            height=height,
+        )

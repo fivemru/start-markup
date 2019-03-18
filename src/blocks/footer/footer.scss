@@ -1,0 +1,17 @@
+@import 'helpers';
+
+/* footer */
+.footer {
+  color: $color--main-light;
+  background-color: #1d3858;
+
+  &__title {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 300;
+  }
+}

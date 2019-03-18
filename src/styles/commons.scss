@@ -1,0 +1,49 @@
+@import 'fonts';
+@import 'helpers';
+
+/* Common styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:before,
+*:after {
+  display: block;
+}
+
+html {
+  font-size: $html-font-size;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $color--body-bg;
+  color: $color--main-dark;
+
+  font-family: $font-family--body;
+  font-size: $font-size--body;
+  line-height: $line-height--body;
+  font-weight: $font-weight--body;
+  font-style: $font-style--body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+img {
+  border: 0;
+}

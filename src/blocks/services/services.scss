@@ -1,0 +1,88 @@
+@import 'helpers';
+
+.services {
+  background-color: $color--main-light;
+
+  $margin: 2rem;
+  $margin-mobile: 1rem;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -$margin;
+    margin-left: -$margin;
+
+    @include mq-max($screen-size--xs) {
+      margin-top: -$margin-mobile;
+      margin-left: -$margin-mobile;
+    }
+  }
+
+  &__item {
+    margin-top: $margin;
+    margin-left: $margin;
+
+    @include mq-max($screen-size--xs) {
+      margin-top: $margin-mobile;
+      margin-left: $margin-mobile;
+    }
+  }
+}
+
+.service {
+  position: relative;
+  min-width: 13.5rem;
+  max-width: 23rem;
+  height: 12rem;
+  flex-basis: 100%;
+  border: 1px solid #dfdfdf;
+  border-bottom-color: $color--main-green;
+  border-radius: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  cursor: default;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+
+  @include mq-max($screen-size--lg-md) {
+    max-width: 20rem;
+    flex: 1 1 0;
+  }
+
+  @include mq-max($screen-size--sm-md) {
+    height: 8rem;
+  }
+
+  @include mq-max($screen-size--min-xs) {
+    min-width: 12rem;
+  }
+
+  @include mq-min($screen-size--min-xs) {
+    min-width: 13.5rem;
+  }
+
+  @include mq-min($screen-size--md) {
+    min-width: 16rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    left: 0;
+    bottom: 0;
+    background-color: $color--main-green;
+  }
+
+  &__title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    word-wrap: break-word;
+  }
+}

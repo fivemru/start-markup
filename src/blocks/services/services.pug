@@ -1,0 +1,12 @@
+mixin services(title, items)
+
+    section.services.section&attributes(attributes)
+        .section__wrapper.page__wrapper
+            h2.section__title!= title
+            .services__list
+                each item in items
+                    +service(item).services__item
+
+mixin service(data)
+    .service&attributes(attributes)
+        .service__title.section__card-title!= data.title

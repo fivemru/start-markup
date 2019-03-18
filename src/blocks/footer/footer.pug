@@ -1,0 +1,10 @@
+
+mixin footer({city, year})
+    footer.footer&attributes(attributes)
+        .footer__title
+            +svg-sprite(require('blocks/footer/sprite/place.svg'), 12, 12, '#008eff')
+            | &nbsp;
+            = city
+            +svg-sprite(require('blocks/footer/sprite/place.svg'), 12, 12, '#8dcdff')
+            br
+            +svg-sprite(require('blocks/footer/sprite/' + year + '.svg'), 30, 30)

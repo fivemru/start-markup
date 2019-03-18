@@ -1,0 +1,53 @@
+$html-font-size: 10px;
+
+$color--body-bg: #ffffff;
+$color--section-bg: #ffffff;
+$color--main-light: #f9f9f9;
+$color--main-dark: #191919;
+$color--main-green: #b4e946;
+$color--link-underline: #b4e9468f;
+$color--main-pink: #ff9090;
+
+$screen-size--lg: 1152px;
+$screen-size--lg-md: 1024px;
+$screen-size--md: 720px;
+$screen-size--sm-md: 640px;
+$screen-size--sm: 540px;
+$screen-size--xs: 460px;
+$screen-size--min-xs: 375px;
+
+$font-family--body: Roboto, Arial, sans-serif;
+$font-size--body: 1.6rem;
+$font-style--body: normal;
+$font-weight--body: 400;
+$line-height--body: 1.2;
+
+@mixin mq-min-max($min, $max) {
+  @media all and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin mq-max($width) {
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mq-min($width) {
+  @media all and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mq-max-h($height) {
+  @media all and (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin mq-min-h($height) {
+  @media all and (min-height: $height) {
+    @content;
+  }
+}

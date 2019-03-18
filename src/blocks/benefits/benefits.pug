@@ -1,0 +1,13 @@
+mixin benefits(title, items)
+
+    section.benefits.section&attributes(attributes)
+        .section__wrapper
+            h2.section__title!= title
+            .benefits__list
+                each item in items
+                    +benefit(item).benefits__item
+
+mixin benefit(data)
+    .benefit&attributes(attributes)
+        .benefit__icon(class=`benefit__icon--${data.icon}`)
+        .benefit__text.section__text= data.text

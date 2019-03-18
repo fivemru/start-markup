@@ -1,0 +1,2 @@
+// Dependencied
+import './header.scss'

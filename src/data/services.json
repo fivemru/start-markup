@@ -1,0 +1,24 @@
+{
+  "title": "Услуги / ремонт",
+  "items": [
+    { "title": "Агрегатный ремонт" },
+    { "title": "Глушители" },
+    { "title": "ДВС" },
+    { "title": "Диагности&shy;ка" },
+    { "title": "Кузовной ремонт" },
+    { "title": "Подвеска" },
+    { "title": "Рулевое управление" },
+    {
+      "title": "Система <span class=\"break-line\">кондициони&shy;рования</span>"
+    },
+    { "title": "Система отопления" },
+    { "title": "Система <span class=\"break-line\">охлажде&shy;ния</span>" },
+    { "title": "Сцепление" },
+    {
+      "title": "<span class=\"break-line\">Техниче&shy;ское</span> <span class=\"break-line\">обслужива&shy;ние</span>"
+    },
+    { "title": "Тормозная система" },
+    { "title": "Ходовая" },
+    { "title": "Шиномонтаж" }
+  ]
+}

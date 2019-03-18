@@ -1,0 +1,13 @@
+include /blocks/logo/logo.pug
+
+mixin header({ title = 'Title', subtitle = 'Subtitle' })
+  
+    header.header.section&attributes(attributes)
+        .header__bg-image
+        .header__wrapper.section__wrapper.page__wrapper
+            .header__container
+                .header__logo
+                    +logo("/", "Автомастерская на Парнасе - ParnasAuto", 249, 159)
+                .header__content
+                    h1.header__title!= title
+                    h2.header__subtitle!= subtitle

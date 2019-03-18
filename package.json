@@ -1,0 +1,69 @@
+{
+  "name": "parnasauto.ru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:prod": "rimraf dist/* && cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "start:prod": "cross-env  NODE_ENV=production START_SERVER=browsersync webpack --watch --progress --hide-modules",
+    "start": "cross-env NODE_ENV=development START_SERVER=browsersync webpack --watch --progress --hide-modules",
+    "server": "browser-sync start --server dist --files dist --port 3000 --no-open",
+    "eslint": "eslint .",
+    "prettier": "prettier src/**/*.js webpack/**/*.js *.js *.json src/**/*.json --write",
+    "deploy": "./deploy.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.1.3",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^5.0.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.0.0",
+    "cssnano": "^4.0.5",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "file-loader": "^3.0.1",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.2.0",
+    "image-sprite-webpack-plugin": "^0.2.4",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.1",
+    "lint-staged": "^8.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "prettier": "^1.14.2",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "raw-loader": "^1.0.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.23.1",
+    "svg-sprite-loader": "^4.1.3",
+    "svgo": "^1.0.5",
+    "svgo-loader": "^2.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-merge": "^4.1.4"
+  }
+}

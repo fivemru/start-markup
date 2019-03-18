@@ -1,0 +1,24 @@
+mixin menu(items = [])
+
+    - const contacts = require('data/contacts.json');
+
+    .nav.section
+        .nav__wrapper.page__wrapper
+            .nav__bg
+
+            .btn.nav__btn.btn--burger
+                i.btn__l1
+                i.btn__l2
+                i.btn__l3
+
+            .nav__phones
+                each phone in contacts.addresses[0].phones
+                    div
+                        a.nav__phone(href='tel:' + phone.replace(/[\s)()-]+/g, ''))= phone
+
+            .nav__menu
+                ul.menu
+                    each item in items
+                        li.menu__item
+                            a.menu__link(href=item.href)!= item.text
+

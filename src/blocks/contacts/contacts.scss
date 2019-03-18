@@ -1,0 +1,137 @@
+@import 'helpers';
+
+$font-size--contact__content: 1.7rem;
+$font-size--contact__title: 2.2rem;
+$font-size--contact__phone: 1.8rem;
+$line-height--contact__content: 1.2;
+$line-height--contact__title: 1.2;
+$line-height--contact__phone: 1.8;
+$font-weight--contact__content: 300;
+$font-weight--contact__title: 700;
+$font-weight--contact__phone: 700;
+
+.map-container {
+  background-image: url(./map.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.contacts {
+  background-color: $color--main-light;
+
+  $height: 45rem;
+
+  &__content {
+    position: relative;
+    height: $height;
+    text-align: center;
+
+    @include mq-max($screen-size--md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    @include mq-max($screen-size--sm-md) {
+      flex-direction: column;
+    }
+  }
+
+  &__map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+
+    @include mq-max($screen-size--sm-md) {
+      max-height: 50%;
+    }
+
+    & > div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    right: 4.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include mq-max($screen-size--md) {
+      position: relative;
+      right: 0rem;
+      top: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+.contact {
+  width: 25rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: $font-size--contact__content;
+  line-height: $line-height--contact__content;
+  font-weight: $font-weight--contact__content;
+
+  @include mq-max($screen-size--md) {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+  }
+
+  &__title,
+  &__phone-list,
+  &__address {
+    padding-bottom: 2rem;
+
+    @include mq-max($screen-size--sm-md) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    padding-bottom: 2.6rem;
+    font-size: $font-size--contact__title;
+    line-height: $line-height--contact__title;
+    font-weight: $font-weight--contact__title;
+
+    @include mq-max($screen-size--sm-md) {
+      padding-bottom: 1.6rem;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      width: 100%;
+      height: 0.3rem;
+      top: 0.2rem;
+      background-color: $color--main-green;
+    }
+  }
+
+  &__phone {
+    display: inline-block;
+    color: $color--main-dark;
+    font-size: $font-size--contact__phone;
+    line-height: $line-height--contact__phone;
+    font-weight: $font-weight--contact__phone;
+
+    &:hover {
+      color: $color--main-pink;
+    }
+  }
+}

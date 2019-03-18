@@ -1,0 +1,6 @@
+dist/
+node_modules/
+src/polyfills.js
+src/pauto-manager/
+deploy.sh
+!.eslintrc.js

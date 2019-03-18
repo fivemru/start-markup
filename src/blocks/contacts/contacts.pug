@@ -1,0 +1,25 @@
+mixin contacts(title, items)
+
+    section.contacts.section&attributes(attributes)
+        .section__wrapper.page__wrapper
+            h2.section__title!= title
+
+            .contacts__content
+                .contacts__map
+                    .map-container
+
+                .contacts__list
+                    each item in items
+                        +contact(item).contacts__item
+
+mixin contact(data)
+    .contact&attributes(attributes)
+        h3.contact__title= data.title
+
+        .contact__phone-list
+            each phone in data.phones
+                div
+                    a.contact__phone(href='tel:' + phone.replace(/[\s)()-]+/g, ''))= phone
+
+        .contact__address!= data.address
+        .contact__schedule!= data.schedule

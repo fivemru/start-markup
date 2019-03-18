@@ -1,0 +1,16 @@
+include /blocks/svg/svg.pug
+
+mixin icon(iconName, width, height, fill, stroke)
+    -
+        var images = {
+            'contrast': require('blocks/icon/sprite/contrast.svg'),
+            'paints': require('blocks/icon/sprite/paints.svg'),
+            'picker': require('blocks/icon/sprite/color-picker.svg'),
+        };
+        var image = images[iconName];
+
+    //- +svg-sprite(require('blocks/icon/sprite/contrast.svg'), width, height, fill, stroke)
+    +svg-sprite(image, width, height, fill, stroke)
+    //- +svg-sprite(image, 40, 40)
+    //- +svg-sprite(images[iconName], width, height, fill, stroke)
+    //- +svg-sprite(images[iconName], 40, 40)

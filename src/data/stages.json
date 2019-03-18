@@ -1,0 +1,35 @@
+{
+  "title": "Порядок работы",
+  "items": [
+    {
+      "num": 1,
+      "icon": "request",
+      "title": "Заявка"
+    },
+    {
+      "num": 2,
+      "icon": "diagnostics",
+      "title": "Диагностика"
+    },
+    {
+      "num": 3,
+      "icon": "agreement",
+      "title": "Согласование"
+    },
+    {
+      "num": 4,
+      "icon": "repair",
+      "title": "Ремонт"
+    },
+    {
+      "num": 5,
+      "icon": "checkout",
+      "title": "Проверка"
+    },
+    {
+      "num": 6,
+      "icon": "payment",
+      "title": "Оплата"
+    }
+  ]
+}

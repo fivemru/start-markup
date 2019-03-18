@@ -1,0 +1,48 @@
+extends /layouts/main/main.pug
+include /blocks/menu/menu.pug
+include /blocks/benefits/benefits.pug
+include /blocks/services/services.pug
+include /blocks/stages/stages.pug
+include /blocks/contacts/contacts.pug
+
+block title
+    - const { title } = require('data/page.index.json')
+    title= title
+
+block meta
+    - const { meta } = require('data/page.index.json')
+    meta(
+        name='description',
+        content=meta.description,
+    )
+    meta(
+        name='keywords',
+        content=meta.keywords,
+    )
+
+block header
+    -
+        const menu = require('data/menu.json')
+        const { header } = require('data/page.index.json')
+    
+    +menu(menu)
+    +header(header)
+
+block content
+    -
+        const { footer } = require('data/page.index.json')
+        const benefits = require('data/benefits.json')
+        const services = require('data/services.json')
+        const stages = require('data/stages.json')
+        const contacts = require('data/contacts.json')
+
+    +benefits(benefits.title, benefits.items).page__wrapper(id='benefits')
+
+    +services(services.title, services.items)(id='services')
+
+    +stages(stages.title, stages.items).page__wrapper(id='stages')
+
+    +contacts(contacts.title, contacts.addresses)(id='contacts')
+
+block footer
+    +footer(footer)
