@@ -2,6 +2,15 @@
 
 In this repository there is a simple landing page of one of my clients.
 
+SCSS files are processed without using huge `node-sass`, `precss` is used for this.
+The `node_modules` directory has a size of `123MB`. (my previous repository [start-markup-sass](https://github.com/fivemru/start-markup-sass)).
+
+However, it should be noted that sass features such as `@function` or `map-get` are not supported.
+
+## Demo
+
+https://fivemru.github.io/start-markup/
+
 ## Main tools
 
 - `webpack 4`
@@ -75,12 +84,13 @@ Put files in `(layouts|pages|blocks)/__ITEM__/(`**images**`/)?*.svg`
 
   ```pug
   img(src=require('blocks/logo/logo.svg')
+  //- or
   img(src=require('blocks/logo/images/logo.svg')
   ```
 
 - `scss`
 
-  ```css
+  ```
   background-image: url('./logo.svg')
   background-image: url('./images/logo.svg')
   ```

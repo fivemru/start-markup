@@ -10,7 +10,8 @@
     "server": "browser-sync start --server dist --files dist --port 3000 --no-open",
     "eslint": "eslint .",
     "prettier": "prettier src/**/*.js webpack/**/*.js *.js *.json src/**/*.json --write",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "ghpages": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {
