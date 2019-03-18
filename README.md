@@ -9,7 +9,7 @@ However, it should be noted that sass features such as `@function` or `map-get` 
 
 ## Demo
 
-https://fivemru.github.io/start-markup/
+https://fivemru.github.io/start-markup-scss/
 
 ## Main tools
 
