@@ -1,0 +1,6 @@
+# Host: parnasauto.ru
+# sitemap: https://parnasauto.ru/sitemap.xml
+
+# for gh-pages
+User-agent: *
+Disallow: /
