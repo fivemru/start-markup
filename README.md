@@ -1,4 +1,4 @@
-# Starter Markup Kit
+# Markup starter kit with scss
 
 In this repository there is a simple landing page of one of my clients.
 
